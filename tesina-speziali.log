@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.7)  17 FEB 2023 15:21
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.7)  17 FEB 2023 15:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1502,19 +1502,16 @@ Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;ma
 
 ]
 Capitolo 1.
+Capitolo 2.
 [3
 
 ]
-Capitolo 2.
+Capitolo 3.
 [4
 
 ]
-Capitolo 3.
-[5
-
-]
 Capitolo 4.
-[6
+[5
 
 ] (./tesina-speziali.aux)
 
@@ -1535,4 +1532,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  99i,5n,133p,1857b,4832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tesina-speziali.pdf (7 pages).
+Output written on tesina-speziali.pdf (6 pages).
