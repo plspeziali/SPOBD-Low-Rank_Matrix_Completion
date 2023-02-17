@@ -1,0 +1,280 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[italian]{babel}
+%\usepackage[T1]{fontenc} % Riga da commentare se si compila con PDFLaTeX
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum} % genera testo fittizio
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{titlesec}
+\usepackage{cochineal}
+\usepackage[cochineal]{newtxmath}
+\usepackage[simplified]{pgf-umlcd}
+\usepackage{float}
+\usepackage{wrapfig,lipsum}
+\usepackage{fancyhdr, etoolbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{xparse}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{etaremune}
+\usepackage{subfig}
+\usepackage[edges]{forest}
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+\newlength\Size
+\setlength\Size{4pt}
+\tikzset{%
+  folder/.pic={%
+    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);
+    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+  },
+  file/.pic={%
+    \filldraw [draw=folderborder, top color=folderbg!5, bottom color=folderbg!10] (-\Size,.4*\Size+5pt) coordinate (a) |- (\Size,-1.2*\Size) coordinate (b) -- ++(0,1.6*\Size) coordinate (c) -- ++(-5pt,5pt) coordinate (d) -- cycle (d) |- (c) ;
+  },
+}
+\forestset{%
+  declare autowrapped toks={pic me}{},
+  pic dir tree/.style={%
+    for tree={%
+      folder,
+      font=\ttfamily,
+      grow'=0,
+    },
+    before typesetting nodes={%
+      for tree={%
+        edge label+/.option={pic me},
+      },
+    },
+  },
+  pic me set/.code n args=2{%
+    \forestset{%
+      #1/.style={%
+        inner xsep=2\Size,
+        pic me={pic {#2}},
+      }
+    }
+  },
+  pic me set={directory}{folder},
+  pic me set={file}{file},
+}
+\include{json-lang}
+\usepackage[style=numeric-comp,useprefix,hyperref,backend=bibtex]{biblatex}
+
+
+\NewDocumentCommand{\codeword}{v}{%
+    \texttt{\textcolor{blue}{#1}}%
+}
+
+\lstset{language=C,keywordstyle={\bfseries \color{blue}}}
+
+%\usetikzlibrary{calc}
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyhead[OL]{\ifnumodd{\value{page}}{\slshape \leftmark}{\slshape SEZIONE \rightmark}}
+\fancypagestyle{mystyle}{
+    \fancyhead[OL]{\slshape \leftmark}
+}
+\fancyfoot[C]{\thepage}
+
+\fontfamily{bch}\selectfont
+
+% Taken from Lena Herrmann at
+% http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
+
+\usepackage{color} %use color
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+%Customize a bit the look
+\lstset{ %
+backgroundcolor=\color{white}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+basicstyle=\footnotesize, % the size of the fonts that are used for the code
+breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+breaklines=true, % sets automatic line breaking
+captionpos=b, % sets the caption-position to bottom
+commentstyle=\color{mygreen}, % comment style
+deletekeywords={...}, % if you want to delete keywords from the given language
+escapeinside={<@}{@>}, % if you want to add LaTeX within your code
+extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+frame=single, % adds a frame around the code
+keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+keywordstyle=\color{blue}, % keyword style
+% language=Octave, % the language of the code
+morekeywords={*,...}, % if you want to add more keywords to the set
+numbers=left, % where to put the line-numbers; possible values are (none, left, right)
+numbersep=5pt, % how far the line-numbers are from the code
+numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+rulecolor=\color{black}, % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+showspaces=false, % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+showstringspaces=false, % underline spaces within strings only
+showtabs=false, % show tabs within strings adding particular underscores
+stepnumber=1, % the step between two line-numbers. If it's 1, each line will be numbered
+stringstyle=\color{mymauve}, % string literal style
+tabsize=1, % sets default tabsize to 2 spaces
+title=\lstname, % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%END of listing package%
+
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, while, do, else, case, break, for, of, const, async, await},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+
+\lstset{
+language=JavaScript,
+extendedchars=true,
+basicstyle=\footnotesize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=9pt,
+tabsize=1,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  tabsize=1,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+
+\titleformat{\chapter}[display]{\Huge\bfseries}{}{0pt}{\thechapter.\ }
+
+\graphicspath{{figures/}}
+%
+%\addtolength{\topmargin}{-.875in} % reduce the default top margin
+%\addtolength{\topmargin}{-2cm} % reduce the default top margin
+%
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                %
+%     Begin Docuemnt [start]     %
+%                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Title Page [start]     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declare new goemetry for the title page only.
+{\Large \noindent Paolo Speziali} \newline
+
+\vspace{1cm}
+
+{\begin{flushleft}
+
+  {\normalsize \noindent Tesina di}
+  \vspace{0.2cm}
+  
+  {\Large \noindent Signal Processing and Optimization for Big Data}
+
+  \vspace{0.2cm}
+  
+  {\large \noindent del Prof.~Paolo Banelli}
+
+  \vspace{2cm}
+
+  \fontsize{21.8}{26.16} \selectfont \bfseries \noindent 
+  Low-Rank Matrix Completion \\
+  con implementazione e \\ 
+  verifica sperimentale \\
+  \end{flushleft}}
+  
+  \vspace{4cm}
+
+
+\noindent Perugia, Anno Accademico 2022/2023
+
+\noindent Università degli Studi di Perugia \\
+Corso di laurea magistrale in Ingegneria Informatica e Robotica \\
+Curriculum Data Science \\
+Dipartimento di Ingegneria
+
+\vspace{0.7cm}
+
+\noindent \includegraphics[width=0.5\textwidth]{Figures/logounipg2021}
+% Ends the declared geometry for the titlepage
+\restoregeometry
+\end{titlepage}
+\normalfont
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Title Page [end]     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \thispagestyle{empty} \ \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Indice [start]     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\onehalfspacing
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%     Indice [end]     %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Introduzione}
+
+
+
+\chapter{Concetti teorici}
+
+
+
+\chapter{Implementazione degli algoritmi}
+
+
+
+\chapter{Verifica sperimentale}
+
+
+\hyphenpenalty=0
+
+\cleardoublepage\phantomsection % to fix wrong hyperref to \part{Epilogue}
+
+\end{document}
