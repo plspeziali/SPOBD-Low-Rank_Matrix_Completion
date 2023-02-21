@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.7)  17 FEB 2023 15:38
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.7)  21 FEB 2023 21:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1320,7 +1320,7 @@ Package fontspec Info: Font family 'Cochineal(4)' created for font 'Cochineal'
 (fontspec)             <->s*[1]"[Cochineal-BoldItalic.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 198.
+(Font)              scaled to size 12.0pt on input line 219.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 12.0pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 
@@ -1347,50 +1347,50 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./tesina-speziali.aux)
 \openout1 = `tesina-speziali.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/zcochmi/m/it on input line 198.
-LaTeX Font Info:    Trying to load font information for OML+zcochmi on input line 198.
+LaTeX Font Info:    Checking defaults for OML/zcochmi/m/it on input line 219.
+LaTeX Font Info:    Trying to load font information for OML+zcochmi on input line 219.
  (e:/texlive/2022/texmf-dist/tex/latex/cochineal/omlzcochmi.fd
 File: omlzcochmi.fd 2015/06/23 Fontinst v1.933 font definitions for OML/zcochmi.
 )
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 198.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 198.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 219.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 219.
  (e:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 198.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 198.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 219.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 219.
  (e:/texlive/2022/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 198.
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 198.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 198.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 219.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 219.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 219.
  (e:/texlive/2022/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 198.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 198.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 198.
+LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 219.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 219.
  (e:/texlive/2022/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    ... okay on input line 219.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1426,13 +1426,13 @@ LaTeX Font Info:    ... okay on input line 198.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 198.
+Package hyperref Info: Link coloring OFF on input line 219.
 (./tesina-speziali.out) (./tesina-speziali.out)
 \@outlinefile=\write6
 \openout6 = `tesina-speziali.out'.
 
-LaTeX Info: Command `\dddot' is already robust on input line 198.
-LaTeX Info: Command `\ddddot' is already robust on input line 198.
+LaTeX Info: Command `\dddot' is already robust on input line 219.
+LaTeX Info: Command `\ddddot' is already robust on input line 219.
 \c@lstlisting=\count528
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1456,22 +1456,22 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tesina-speziali.bbl' not found.
 
 No file tesina-speziali.bbl.
-Package biblatex Info: Reference section=0 on input line 198.
-Package biblatex Info: Reference segment=0 on input line 198.
+Package biblatex Info: Reference section=0 on input line 219.
+Package biblatex Info: Reference segment=0 on input line 219.
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 206.
+(Font)              scaled to size 17.28pt on input line 227.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 17.28pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 219.
+(Font)              scaled to size 14.4pt on input line 240.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 14.4pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 21.8pt on input line 223.
+(Font)              scaled to size 21.8pt on input line 244.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 21.8pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
-(Font)              scaled to size 21.8pt on input line 223.
+(Font)              scaled to size 21.8pt on input line 244.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 21.8pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
 File: Figures/logounipg2021.png Graphic file (type bmp)
@@ -1482,11 +1482,11 @@ File: Figures/logounipg2021.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 254.
+(Font)              scaled to size 24.88pt on input line 275.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 24.88pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 254.
+(Font)              scaled to size 24.88pt on input line 275.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 24.88pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
  (./tesina-speziali.toc
@@ -1494,6 +1494,70 @@ LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 3.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 12.0pt
  -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5.
+ (e:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "rm-lmr12" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+Requested font "rm-lmr9" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
+Requested font "rm-lmr7" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+Requested font "zcochmi" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/cochineal/zcochmi.tfm
+Requested font "zcochmi" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/cochineal/zcochmi.tfm
+Requested font "zcochmi" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/cochineal/zcochmi.tfm
+Requested font "ntxsy" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsy.tfm
+Requested font "ntxsy" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsy.tfm
+Requested font "ntxsy7" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsy7.tfm
+Requested font "ntxexx" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+Requested font "ntxexx" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+Requested font "ntxexx" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 5.
+ (e:/texlive/2022/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+Requested font "zcochmia" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/cochineal/zcochmia.tfm
+Requested font "zcochmia" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/cochineal/zcochmia.tfm
+Requested font "zcochmia" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/cochineal/zcochmia.tfm
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 5.
+ (e:/texlive/2022/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+Requested font "ntxsym" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+Requested font "ntxsym" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+Requested font "ntxsym" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 5.
+ (e:/texlive/2022/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+Requested font "ntxsyc" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+Requested font "ntxsyc" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+Requested font "ntxsyc" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+Requested font "ntxexa" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+Requested font "ntxexa" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+Requested font "ntxexa" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 )
 \tf@toc=\write7
 \openout7 = `tesina-speziali.toc'.
@@ -1503,33 +1567,96 @@ Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;ma
 ]
 Capitolo 1.
 Capitolo 2.
+LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
+(Font)              scaled to size 17.28pt on input line 290.
+Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 17.28pt
+ -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
+LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
+(Font)              scaled to size 8.8pt on input line 294.
+Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
+LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
+(Font)              scaled to size 6.6pt on input line 294.
+Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 [3
 
 ]
+LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/sl' in size <12> not available
+(Font)              Font shape `TU/Cochineal(4)/m/it' tried instead on input line 345.
+LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 345.
+Requested font "[Cochineal-Italic.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Italic.otf
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 382.
+Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 14.4pt
+ -> e:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6]
+Requested font "rm-lmri12" at 12.0pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
+Requested font "rm-lmri9" at 8.8pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri9.tfm
+Requested font "rm-lmri7" at 6.6pt
+ -> e:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7]
 Capitolo 3.
-[4
+[8
 
 ]
 Capitolo 4.
-[5
+[9
 
 ] (./tesina-speziali.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `tesina-speziali.out' has not changed.
-(rerunfilecheck)             Checksum: EEE68D7E3510DF6862E42A2F1FFFF475;584.
+(rerunfilecheck)             Checksum: 8E3F10C804F660B07C6ADF775B0AAEE7;1674.
 Package logreq Info: Writing requests to 'tesina-speziali.run.xml'.
 \openout1 = `tesina-speziali.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48564 strings out of 475748
- 1055966 string characters out of 5802712
- 1866150 words of memory out of 5000000
- 69065 multiletter control sequences out of 15000+600000
- 472746 words of font info for 46 fonts, out of 8000000 for 9000
+ 48708 strings out of 475748
+ 1058730 string characters out of 5802712
+ 1875150 words of memory out of 5000000
+ 69178 multiletter control sequences out of 15000+600000
+ 503437 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,5n,133p,1857b,4832s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,133p,1857b,4832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tesina-speziali.pdf (6 pages).
+Output written on tesina-speziali.pdf (10 pages).
