@@ -176,6 +176,27 @@ captionpos=b
   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
 
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normtwo}[1]{\left\lVert#1\right\rVert _2^2}
+\newcommand{\nukenorm}[1]{\left\lVert#1\right\rVert _*}
+\newcommand{\frobnorm}[1]{\left\lVert#1\right\rVert _F}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ux}{\underline{x}}
+\newcommand{\uy}{\underline{y}}
+\newcommand{\ug}{\underline{g}}
+\newcommand{\ue}{\underline{e}}
+\newcommand{\uk}{\underline{k}}
+\newcommand{\uw}{\underline{w}}
+\newcommand{\uv}{\underline{v}}
+\newcommand{\ub}{\underline{b}}
+\newcommand{\uc}{\underline{c}}
+\newcommand{\uone}{\underline{1}}
+\newcommand{\ut}{\underline{\theta}}
+\newcommand{\est}{\underline{\hat{\theta}}}
+
+\newcommand{\mF}{\mathcal{F}}
+\newcommand{\mS}{\mathcal{S}}
+
 
 \titleformat{\chapter}[display]{\Huge\bfseries}{}{0pt}{\thechapter.\ }
 
@@ -266,7 +287,149 @@ abbiamo a disoposizione solo un sottoinsieme limtato di entry.
 
 {\let\clearpage\relax\chapter{Concetti teorici}}
 
+\section{Formulazione del problema}
 
+Sia $M\in\mathbb{R}^{n_1\times n_2}$ con rango $r$, e sia data la sua scomposizione ai valori
+singolari (SVD):
+$$M=U\Sigma V^T \quad\text{con}\quad U\in\mathbb{R}^{n_1\times r},
+\;\Sigma\in\mathbb{R}^{r\times r},\;V\in\mathbb{R}^{n_2\times r}$$
+dove $U$ e $V$ sono composte da colonne ortonormali, e $\Sigma$ è una matrice
+diagonale con i valori singolari ordinati in modo non crescente
+($\sigma_1\geq\sigma_2\geq\ldots\geq\sigma_r>0$).
+
+I \textbf{gradi di libertà} di $M$ sono $(n_1 + n_2 - r)r$, che è il numero totale di parametri
+necessari per specificare univocamente la matrice $M$.
+
+\newpage
+
+Supponiamo di avere delle osservazioni parziali di $M$ su un insieme di indici
+$$\Omega \subset \{1,2,\ldots,n_1\}\times\{1,2,\ldots,n_2\}$$
+e definiamo l'\textbf{operatore di osservazione}
+$\mathcal{P}_{\Omega}:\mathbb{R}^{n_1\times n_2}\to\mathbb{R}^{n_1\times n_2}$ come segue:
+$$\left[\mathcal{P}_{\Omega}(M)\right] _{ij}=\left\{\begin{matrix}M_{ij}, & \text{se}\; (i,j)\in X \\ 0, & \text{altrimenti}\end{matrix}\right.$$
+Il nostro obiettivo è recuperare $M$ da $\mathcal{P}_{\Omega}(M)$
+quando il numero di osservazioni\\ $m = |\Omega| \ll n_1 n_2$, ovvero quando
+è molto più piccolo del numero di elementi in $M$, e sotto l'assunzione che $M$
+sia a basso rango, ovvero $r\ll\min(n_1,n_2)$.
+Per semplicità notazionale, poniamo $n=\max(n_1,n_2)$.
+
+\section{Soluzione del problema}
+
+Quali tipi di matrici a basso rango possiamo completare?
+Consideriamo le matrici $M_1$ e $M_2$ di rango $1$ e di dimensione $4 \times 4$:
+
+$$M_1 = \begin{bmatrix}
+  1 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0
+\end{bmatrix}
+\qquad
+M_2 = \begin{bmatrix}
+  1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1
+\end{bmatrix}$$
+
+La matrice $M_1$ è più difficile da completare
+poiché la maggior parte delle sue voci sono nulle
+e quindi abbiamo bisogno di raccogliere più misure per assicurarsi
+che abbastanza ``massa'' venga dalle sue voci non nulle.
+Al contrario, la massa di $M_2$ è distribuita più uniformemente su tutte le voci,
+rendendolo più facile da propagare da una voce all'altra.
+
+In altre parole, una matrice a basso rango è più facile da completare se la sua energia
+si distribuisce uniformemente su diverse coordinate.
+Questa proprietà è catturata dalla \textbf{coerenza}, che misura l'allineamento
+tra lo spazio delle colonne/righe della matrice a basso rango con i vettori della base standard.
+
+Per una matrice $U\in\mathbb{R}^{n_1\times r}$ con colonne ortonormali,
+$P_U$ rappresenta la proiezione ortogonale sullo spazio delle colonne di $U$.
+La \textbf{coerenza} di $U$ è definita come segue:
+$$ \mu(U) = \frac{n_1}{r}\, \underset{1 \leq i \leq n_1}{max}\, \normtwo{P_U\, \underline{e}_i}
+= \frac{n_1}{r}\, \underset{1 \leq i \leq n_1}{max}\, \normtwo{U^T\, \underline{e}_i}$$
+dove $\underline{e}_i$ è l'$i$-esimo vettore della base canonica.
+
+Per una matrice a basso rango $M$ il cui SVD è data da $M=U\Sigma V^T$,
+la coerenza di $M$ è definita come:
+
+$$ \mu = max\{\mu(U), \mu(V)\} $$
+
+Si noti che la coerenza $\mu$ è determinata dai vettori singolari di $M$ ed
+è indipendente dai suoi valori singolari.
+
+Poiché $1\leq \mu(U) \leq \frac{n_1}{r}$
+e $1\leq \mu(V) \leq \frac{n_2}{r}$, abbiamo $1\leq \mu \leq \frac{n}{r}$.
+Nell'esempio precedente, la coerenza di $M_1$ coincide con il limite superiore
+$\frac{n}{r}$, mentre quella di $M_2$ coincide con il limite inferiore $1$.
+Più $\mu$ è piccolo, più è facile completare la matrice.
+
+Possiamo incontrare alcune matrici la cui ricostruzione non è possibile,
+un esempio sarebbe una matrice con tutti i valori eccetto quelli di una colonna completamente
+mancante, essa non potrà essere recuperata in quanto potrebbe giacere ovunque nello
+spazio delle colonne della matrice.
+Ci servono quindi almeno $r$ osservazioni per colonna/riga.
+
+Per evitare di incorrere in questi casi sfavorevoli, supponiamo di star utilizzando
+un pattern di osservazione causale che segua un modello di distribuzione di probabilità
+noto come \textbf{Bernoulli}, per cui ogni valore viene osservato indipendentemente
+e con probabilità uguale a $p := \frac{m}{n_1\cdot n_2}$.
+
+Non è possibile recuperare una matrice a basso rango con un numero di osservazioni
+ad uno dell'ordine di $O(\mu n r \log n)$ utilizzando un qualsiasi algoritmo,
+questo è noto come l'\textbf{information-theoretic lower bound}.
+Rispetto ai gradi di libertà, che sono dell'ordine di $nr$,
+paghiamo un prezzo in complessità di campionamento di un fattore $\mu \log n$,
+mettendo ancora una volta in evidenza il ruolo della coerenza nel completamento di matrici a basso rango.
+
+\newpage
+
+\subsection{Completamento di matrici tramite ottimizzazione convessa}
+
+Cercando di sfruttare la struttura a basso rango della soluzione, un'euristica naturale
+è trovare la matrice con rango minore che permette tali osservazioni:
+$$ \underset{\Phi \in \mathbb{R}^{n_1 \times n_2}}{min}\;\; rank(\Phi) $$
+$$ s.t. \;\;  \mathcal{P}_{\Omega}(\Phi) = \mathcal{P}_{\Omega}(M) $$ 
+Tuttavia, essendo la minimizzazione del rango un problema NP-arduo,
+tale formulazione non è intrattabile, possiamo tuttavia
+pensare a un possibile rilassamento di questa euristica.
+
+Notando che il rango di $\Phi$ è uguale al numero dei suoi valori singolari non nulli,
+sostituiamo $rank(\Phi)$ con la somma dei suoi valori singolari, indicata come \textbf{nuclear norm}:
+$$ \nukenorm{\Phi} \triangleq \sum_{i=1}^n \sigma_i(\Phi) $$
+Quindi, invece di risolvere direttamente il problema visto precedentemente,
+risolviamo la minimizzazione della nuclear norm, che cerca una matrice con la nuclear norm
+minima che soddisfa tutte le misurazioni:
+$$ \underset{\Phi \in \mathbb{R}^{n_1 \times n_2}}{min}\;\; \nukenorm{\Phi} $$
+$$ s.t. \;\;  \mathcal{P}_{\Omega}(\Phi) = \mathcal{P}_{\Omega}(M) $$ 
+Si ottiene così un programma convesso che può
+essere risolto in modo efficiente in tempo polinomiale.
+Inoltre, non richiede la conoscenza
+del rango a priori.
+
+La minimizzazione della nuclear norm può recuperare esattamente
+una matrice di basso rango non appena il numero di misurazioni è leggermente più grande
+dell'information-theoretic lower bound di un fattore logaritmico.
+Supponiamo che ogni valore della matrice $M$ venga osservato indipendentemente
+con una probabilità $p \in (0,1)$. Se:
+$$ p \leq C \; \frac{\mu r \log^2 n}{n} $$
+per una qualche $C>0$ abbastanza grande, allora con grande probabilità
+l'algoritmo recupera esattamente 
+la matrice $M$ come soluzione ottima.
+
+\subsection{Completamento di matrici tramite ottimizzazione non convessa}
+
+L'algoritmo appena visto può essere particolarmente costoso in termini di tempo e memoria
+per problemi su larga scala a causa del dover ottimizzare e memorizzare la variabile $\Phi$.
+Pertanto, è necessario considerare approcci alternativi che scalino in modo più favorevole con $n$.
+Ciò porta al secondo algoritmo basato su gradient descent utilizzando un'inizializzazione adeguata.
+
+Se il rango della matrice $M$ è noto, è naturale incorporare questa conoscenza 
+e considerare un problema least-square vincolato al rango:
+$$ \underset{\Phi \in \mathbb{R}^{n_1 \times n_2}}{min}\;\; \frobnorm{\mathcal{P}_{\Omega}(\Phi - M)}^2 $$
+$$ s.t. \;\;  rank(\Phi) \leq r $$ 
+dove $\frobnorm{\cdot}$ è la \textbf{Frobenius norm} di una matrice.
+Utilizzando la fattorizzazione a basso rango $\Phi = XY^T$ dove $X \in \mathbb{R}^{n_1 \times r}$
+e $Y \in \mathbb{R}^{n_2 \times r}$, riscriviamo il problema qui sopra come 
+un problema d'ottimizzazione non vincolato e non convesso:
+$$ \underset{X,Y}{min}\;\; \mathit{f}(X,Y) := \frobnorm{\mathcal{P}_{\Omega}(XY^T - M)}^2 $$
+Le complessità a livello di memoria di $X$ e $Y$ sono lineari in $n$
+anziché quadratiche, d'altro canto 
 
 \chapter{Implementazione degli algoritmi}
 
