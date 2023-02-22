@@ -17,6 +17,7 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{xparse}
+\usepackage{booktabs}
 \usepackage{url}
 \usepackage{setspace}
 \usepackage{longtable}
@@ -428,8 +429,56 @@ Utilizzando la fattorizzazione a basso rango $\Phi = XY^T$ dove $X \in \mathbb{R
 e $Y \in \mathbb{R}^{n_2 \times r}$, riscriviamo il problema qui sopra come 
 un problema d'ottimizzazione non vincolato e non convesso:
 $$ \underset{X,Y}{min}\;\; \mathit{f}(X,Y) := \frobnorm{\mathcal{P}_{\Omega}(XY^T - M)}^2 $$
-Le complessità a livello di memoria di $X$ e $Y$ sono lineari in $n$
-anziché quadratiche, d'altro canto 
+Le complessità a livello di memoria di $X$ e $Y$ sono lineari in $n$.
+Introduciamo una loss function modificata per sistemare alcuni
+problemi di scalabilità e avere norme bilanciate:
+$$ F(X,Y) = \frac{1}{4p}\mathit{f}(X,Y) + \frac{1}{16}\frobnorm{X^TX - Y^TY}^2  $$
+La probabilità $p$ delle osservazioni può essere stimata com $p = \frac{|\Omega|}{n_1\cdot n_2}$.
+
+Ma come facciamo a ottimizzare la loss non convessa $F(X,Y)$?
+\begin{enumerate}
+  \item Troviamo un'inizializzazione ``spettrale" che sia vicina alla verità di base.
+  Consideriamo la matrice parzialmente osservata $\frac{1}{p}\,\mathcal{P}_{\Omega}(M)$,
+  che è una stima non polarizzata di $M$ con valore atteso pari a
+  $E[\frac{1}{p}\,\mathcal{P}_{\Omega}(M)] = M$.
+  Perciò, un'approssimazione best rank-$r$ produce una stima iniziale adeguata.
+
+  Sia tale approssimazione $U_0 \Sigma_0 V_0^T$, inizializzeremo con:
+  $$ X_0 = U_0 \Sigma_0^{1/2} \;\; \text{ e } \;\; Y_0 = V_0 \Sigma_0^{1/2} $$
+  \item Raffiniamo la stima iniziale con semplici metodi iterativi secondo la
+  seguente regola d'aggiornamento:
+  $$ \begin{bmatrix}
+    X_{t+1}\\ 
+    Y_{t+1}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    X_{t}\\ 
+    Y_{t}
+    \end{bmatrix}
+    - \eta_t
+    \begin{bmatrix}
+    \nabla_X \, F(X_t, Y_t)\\ 
+    \nabla_Y \, F(X_t, Y_t)
+  \end{bmatrix} $$
+  dove $\eta_t$ è la step-size.
+\end{enumerate}
+Il gradient descent converge ad una velocità geometrica
+se il numero di osservazioni è dell'ordine di $\mu^3 r^3 n \log^3 n$.
+Il numero di iterazioni è indipendente dalla grandezza del problema e quindi
+il costo computazionale è molto più basso (unendolo al basso costo di un'iterazione).
+
+Ricapitolando il tutto con una tabella che mette a confronto i tre algoritmi:
+\begin{table}[H]
+  \begin{tabular}{@{}lllll@{}}
+    \cmidrule(r){1-3}
+    \textbf{Algoritmo}                              & \textbf{Complessità campionaria} & \textbf{Complessità computazionale} &  &  \\ \cmidrule(r){1-3}
+    Information-theoretic\\ lower bound               & $\mu n r \log n$                    & NP-arduo                            &  &  \\ \cmidrule(r){1-3}
+    Nuclear norm\\ minimization                       & $\mu n r \log^2 n$                  & Tempo polinomiale                   &  &  \\ \cmidrule(r){1-3}
+    Gradient descent\\ con inizializzazione\\ spettrale & $\mu^3 n r^3 \log^3 n$              & Tempo lineare                       &  &  \\ \cmidrule(r){1-3}
+  \end{tabular}
+\end{table}
+
 
 \chapter{Implementazione degli algoritmi}
 
