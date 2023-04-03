@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.26)  3 APR 2023 14:54
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.26)  3 APR 2023 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1656,7 +1656,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Overfull \hbox (16.07439pt too wide) in paragraph at lines 369--376
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8]
+Overfull \hbox (16.07439pt too wide) in paragraph at lines 377--384
 [][] 
  []
 
@@ -1667,11 +1675,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
+[9]
 Capitolo 3.
 Requested font "[lmmono12-regular]:" at 12.0pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf
-[9
+[10
 
 ]
 Requested font "[lmmono10-italic]:" at 12.0pt
@@ -1684,9 +1692,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[11]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 462.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 470.
 Requested font "[lmmonolt10-bold]:" at 12.0pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf
 
@@ -1697,7 +1705,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[12]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1705,9 +1713,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[13]
 Capitolo 4.
-[13
+[14
 
 ] (./tesina-speziali.aux)
 
@@ -1728,4 +1736,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  99i,12n,133p,1857b,4832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tesina-speziali.pdf (14 pages).
+Output written on tesina-speziali.pdf (15 pages).

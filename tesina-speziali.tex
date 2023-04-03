@@ -176,7 +176,7 @@ Dipartimento di Ingegneria
 
 \chapter{Introduzione}
 
-Lo scopo di questa tesina è l'implementazione in ambiente MATLAB di tre algoritmi
+Lo scopo di questa tesina è l'implementazione in ambiente MATLAB di alcuni algoritmi
 atti a risolvere il problema dello stimare i valori mancanti di una matrice di cui
 abbiamo a disoposizione solo un sottoinsieme limtato di entry.
 
@@ -327,6 +327,11 @@ Le complessità a livello di memoria di $X$ e $Y$ sono lineari in $n$.
 Introduciamo una loss function modificata per sistemare alcuni
 problemi di scalabilità e avere norme bilanciate:
 $$ F(X,Y) = \frac{1}{4p}\mathit{f}(X,Y) + \frac{1}{16}\frobnorm{X^TX - Y^TY}^2  $$
+$$ = \frac{1}{4p}\frobnorm{\mathcal{P}_{\Omega}(XY^T - M)}^2 + \frac{1}{16}\frobnorm{X^TX - Y^TY}^2 $$
+I cui gradienti rispetto a $X$ e a $Y$ sono:
+$$ \frac{\partial F(X,Y)}{\partial X} = \frac{1}{4p} ((\mathcal{P}_{\Omega}(XY^T - M))Y) + \frac{1}{8} X (X^TX-Y^TY)$$
+$$ \frac{\partial F(X,Y)}{\partial Y} = \frac{1}{4p} (X^T(\mathcal{P}_{\Omega}(XY^T - M)))^T + \frac{1}{8} Y (X^TX-Y^TY)$$
+\newpage
 La probabilità $p$ delle osservazioni può essere stimata com $p = \frac{|\Omega|}{n_1\cdot n_2}$.
 
 Ma come facciamo a ottimizzare la loss non convessa $F(X,Y)$?
@@ -359,11 +364,14 @@ Ma come facciamo a ottimizzare la loss non convessa $F(X,Y)$?
 \end{enumerate}
 Data la costante $\kappa = \sigma_1/\sigma_r$,
 se la step-size $0 < \eta_t \equiv \eta \leq 2 / (25\cdot\kappa\cdot\sigma_1)$
-e se il numero di osservazioni è dell'ordine di $\mu^3 r^3 n \log^3 n$
+e se il numero di osservazioni è dell'ordine di $\mu^3 r^3 n \log^3 n$,
+perciò se:
+$$ p \leq C \; \frac{\mu^3 r^3 n \log^3}{n} $$
+per una qualche $C>0$ abbastanza grande,
 il gradient descent converge ad una velocità geometrica.
 Il numero di iterazioni è indipendente dalla grandezza del problema e quindi
 il costo computazionale è molto più basso (unendolo al basso costo di un'iterazione).
-
+\newpage
 Ricapitolando il tutto con una tabella che mette a confronto i tre algoritmi:
 \begin{table}[H]
   \begin{tabular}{@{}lllll@{}}
@@ -489,6 +497,13 @@ $$\frac{\frobnorm{X_t Y_t^T - M}}{\frobnorm{M}}$$questa non serve per il gradien
 ma per valutare le prestazioni dell'algoritmo.
 
 \chapter{Verifica sperimentale}
+
+Per verificare il funzionamento degli algoritmi è stata generata una matrice
+$M$ di rango $10$ e dimensione $10^4 \times 10^4$ costituita da valori
+interi $\in [-10,10]$ e i.i.d., di questa matrice ne è stato
+osservato casualmente il $5\%$ delle entry.
+
+
 
 
 \hyphenpenalty=0
