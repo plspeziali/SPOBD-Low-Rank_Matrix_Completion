@@ -24,45 +24,7 @@
 \usepackage{etaremune}
 \usepackage{subfig}
 \usepackage[edges]{forest}
-\definecolor{folderbg}{RGB}{124,166,198}
-\definecolor{folderborder}{RGB}{110,144,169}
-\newlength\Size
-\setlength\Size{4pt}
-\tikzset{%
-  folder/.pic={%
-    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);
-    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
-  },
-  file/.pic={%
-    \filldraw [draw=folderborder, top color=folderbg!5, bottom color=folderbg!10] (-\Size,.4*\Size+5pt) coordinate (a) |- (\Size,-1.2*\Size) coordinate (b) -- ++(0,1.6*\Size) coordinate (c) -- ++(-5pt,5pt) coordinate (d) -- cycle (d) |- (c) ;
-  },
-}
-\forestset{%
-  declare autowrapped toks={pic me}{},
-  pic dir tree/.style={%
-    for tree={%
-      folder,
-      font=\ttfamily,
-      grow'=0,
-    },
-    before typesetting nodes={%
-      for tree={%
-        edge label+/.option={pic me},
-      },
-    },
-  },
-  pic me set/.code n args=2{%
-    \forestset{%
-      #1/.style={%
-        inner xsep=2\Size,
-        pic me={pic {#2}},
-      }
-    }
-  },
-  pic me set={directory}{folder},
-  pic me set={file}{file},
-}
-\include{json-lang}
+\usepackage{matlab-prettifier}
 \usepackage[style=numeric-comp,useprefix,hyperref,backend=bibtex]{biblatex}
 
 
@@ -84,77 +46,9 @@
 
 \fontfamily{bch}\selectfont
 
-% Taken from Lena Herrmann at
-% http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
-
-\usepackage{color} %use color
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
-\definecolor{mymauve}{rgb}{0.58,0,0.82}
-
-%Customize a bit the look
-\lstset{ %
-backgroundcolor=\color{white}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-basicstyle=\footnotesize, % the size of the fonts that are used for the code
-breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
-breaklines=true, % sets automatic line breaking
-captionpos=b, % sets the caption-position to bottom
-commentstyle=\color{mygreen}, % comment style
-deletekeywords={...}, % if you want to delete keywords from the given language
-escapeinside={<@}{@>}, % if you want to add LaTeX within your code
-extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-frame=single, % adds a frame around the code
-keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-keywordstyle=\color{blue}, % keyword style
-% language=Octave, % the language of the code
-morekeywords={*,...}, % if you want to add more keywords to the set
-numbers=left, % where to put the line-numbers; possible values are (none, left, right)
-numbersep=5pt, % how far the line-numbers are from the code
-numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-rulecolor=\color{black}, % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-showspaces=false, % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-showstringspaces=false, % underline spaces within strings only
-showtabs=false, % show tabs within strings adding particular underscores
-stepnumber=1, % the step between two line-numbers. If it's 1, each line will be numbered
-stringstyle=\color{mymauve}, % string literal style
-tabsize=1, % sets default tabsize to 2 spaces
-title=\lstname, % show the filename of files included with \lstinputlisting; also try caption instead of title
-}
-%END of listing package%
 
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-
-%define Javascript language
-\lstdefinelanguage{JavaScript}{
-keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, while, do, else, case, break, for, of, const, async, await},
-keywordstyle=\color{blue}\bfseries,
-ndkeywords={class, export, boolean, throw, implements, import},
-ndkeywordstyle=\color{darkgray}\bfseries,
-identifierstyle=\color{black},
-sensitive=false,
-comment=[l]{//},
-morecomment=[s]{/*}{*/},
-commentstyle=\color{purple}\ttfamily,
-stringstyle=\color{red}\ttfamily,
-morestring=[b]',
-morestring=[b]"
-}
-
-\lstset{
-language=JavaScript,
-extendedchars=true,
-basicstyle=\footnotesize\ttfamily,
-showstringspaces=false,
-showspaces=false,
-numbers=left,
-numberstyle=\footnotesize,
-numbersep=9pt,
-tabsize=1,
-breaklines=true,
-showtabs=false,
-captionpos=b
-}
 
 \definecolor{pblue}{rgb}{0.13,0.13,1}
 \definecolor{pgreen}{rgb}{0,0.5,0}
@@ -463,8 +357,10 @@ Ma come facciamo a ottimizzare la loss non convessa $F(X,Y)$?
   \end{bmatrix} $$
   dove $\eta_t$ è la step-size.
 \end{enumerate}
-Il gradient descent converge ad una velocità geometrica
-se il numero di osservazioni è dell'ordine di $\mu^3 r^3 n \log^3 n$.
+Data la costante $\kappa = \sigma_1/\sigma_r$,
+se la step-size $0 < \eta_t \equiv \eta \leq 2 / (25\cdot\kappa\cdot\sigma_1)$
+e se il numero di osservazioni è dell'ordine di $\mu^3 r^3 n \log^3 n$
+il gradient descent converge ad una velocità geometrica.
 Il numero di iterazioni è indipendente dalla grandezza del problema e quindi
 il costo computazionale è molto più basso (unendolo al basso costo di un'iterazione).
 
@@ -473,7 +369,7 @@ Ricapitolando il tutto con una tabella che mette a confronto i tre algoritmi:
   \begin{tabular}{@{}lllll@{}}
     \cmidrule(r){1-3}
     \textbf{Algoritmo}                              & \textbf{Complessità campionaria} & \textbf{Complessità computazionale} &  &  \\ \cmidrule(r){1-3}
-    Information-theoretic\\ lower bound               & $\mu n r \log n$                    & NP-arduo                            &  &  \\ \cmidrule(r){1-3}
+    Information-theoretic\\ lower bound               & $\mu n r \log n$                    & NP-hard                           &  &  \\ \cmidrule(r){1-3}
     Nuclear norm\\ minimization                       & $\mu n r \log^2 n$                  & Tempo polinomiale                   &  &  \\ \cmidrule(r){1-3}
     Gradient descent\\ con inizializzazione\\ spettrale & $\mu^3 n r^3 \log^3 n$              & Tempo lineare                       &  &  \\ \cmidrule(r){1-3}
   \end{tabular}
@@ -482,7 +378,115 @@ Ricapitolando il tutto con una tabella che mette a confronto i tre algoritmi:
 
 \chapter{Implementazione degli algoritmi}
 
+Concentriamoci sugli ultimi due algoritmi in quanto
+non ci interessa implementare un algoritmo NP-hard.
 
+\section{Nuclear norm minimization}
+
+Si tratta di un problema di ottimizzazione convessa,
+ci risulta quindi comodo utilizzare il solver CVX.\\
+\begin{lstlisting}[
+  frame=single,
+  numbers=left,
+  style=Matlab-Pyglike]
+cvx_begin
+  variable Phi(n1,n2)
+  minimize ( norm_nuc(Phi) )
+  subject to
+    Phi(~observed) == P_M_mat(~observed)
+cvx_end
+\end{lstlisting}
+Dove \codeword{observed} è una matrice booleana
+che ci consente di selezionare
+gli stessi campioni sia su $\Phi$ che su $M$
+e corrisponde a ciò che fa matematicamente l'operatore
+$\mathcal{P}_{\Omega}(\cdot)$.
+\codeword{P_M_mat} corrisponde a $\mathcal{P}_{\Omega}(M)$
+e lo utilizziamo nel vincolo in quanto non abbiamo accesso ad M
+nella minimizzazione.
+
+\newpage
+
+\section{Gradient descent con inizializzazione spettrale}
+
+Questo algoritmo deve minimizzare una funzione non convessa perciò
+non possiamo utilizzare il solver CVX.
+Utilizziamo quindi il gradient descent per trovare un minimo locale.
+Partiamo inizializzando X e Y come due matrici i cui valori
+sono gaussiani a media nulla e varianza unitaria, indipendenti
+e identicamente distribuiti.\\
+La loss function F è dipendente dalle matrici
+$x$, $y$ e una matrice $m$ che altro non è che $X\times Y'$
+dove solo i valori di \codeword{observed} possono essere non nulli.\\
+
+\begin{lstlisting}[
+  frame=single,
+  numbers=left,
+  style=Matlab-Pyglike]
+X = normrnd(0,1,[n1,r]);
+Y = normrnd(0,1,[n2,r]);
+
+sigma_1 = max(diag(S));
+sigma_r = min(diag(S));
+k = sigma_1/sigma_r;
+eta = 2/(25*k*sigma_1);
+
+max_iter = 10000;
+tolerance = 1e-5;
+iter = 0;
+converged = false;
+f_vals = zeros(max_iter,1);
+error = zeros(max_iter,1);
+
+% Definisco la cost function e i suoi gradienti
+F = @(x,y,m) 1/(4*p) * norm(m - P_M_mat, 'fro')^2 + (1/16) * norm(x'*x - y'*y, 'fro')^2;
+dF_dx = @(x,y,m) 1/(2*p) * ((m - P_M_mat) * y)   +   (1/8) * x * (x'*x - y'*y);
+dF_dy = @(x,y,m) 1/(2*p) * (x' * (m - P_M_mat))' +   (1/8) * y * (x'*x - y'*y);
+
+\end{lstlisting}
+Il ciclo dovrà fermarsi o al raggiungimento del numero di
+iterazioni \codeword{max_iter} o al verificarsi
+della condizione di convergenza:
+$$ |F_i - F_{i-1}| < 10^{-5} \cdot F_{i-1} $$
+
+\begin{lstlisting}[
+  frame=single,
+  numbers=left,
+  style=Matlab-Pyglike,
+  firstnumber=20]
+% Gradient Descent con Inizializzazione Spettrale
+xy = X*Y';
+m = zeros(n1,n2);
+m(P_Omega) = xy(P_Omega);
+
+while ~converged && iter < max_iter
+    X = X - eta * dF_dx(X,Y,m);
+    Y = Y - eta * dF_dy(X,Y,m);
+
+    xy = X*Y';
+    m = zeros(n1,n2);
+    m(P_Omega) = xy(P_Omega);
+
+    f_vals(iter+1) = F(X,Y,m);
+    error(iter+1) = norm(xy - M, 'fro') / norm(M, 'fro');
+
+    if iter > 0
+        converged = abs(f_vals(iter+1)-f_vals(iter)) < tolerance*f_vals(iter);
+    end
+    iter = iter + 1;
+end
+
+% Matrice ricostruita
+M_rec = X*Y';
+M_rec(~observed) = M(~observed);
+\end{lstlisting}
+
+\newpage
+
+In questo caso viene utilizzata la $M$ completa ma unicamente per
+calcolare la metrica di errore:
+$$\frac{\frobnorm{X_t Y_t^T - M}}{\frobnorm{M}}$$questa non serve per il gradient descent
+ma per valutare le prestazioni dell'algoritmo.
 
 \chapter{Verifica sperimentale}
 

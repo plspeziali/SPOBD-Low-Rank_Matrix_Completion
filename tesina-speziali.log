@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.26)  22 FEB 2023 15:12
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.26)  3 APR 2023 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1048,78 +1048,80 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@externalize@inner@n=\count399
 ) (c:/texlive/2022/texmf-dist/tex/latex/forest/forest-lib-edges.sty
 Package: forest-lib-edges 2016/12/05 v0.1.1
-)
-\Size=\skip73
-
-
-LaTeX Warning: \include should only be used after \begin{document} on input line 65.
-
-No file json-lang.
-(c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/matlab-prettifier/matlab-prettifier.sty
+Package: matlab-prettifier 2014/06/19 v0.3 A package for prettyprinting Matlab source code
+\netBracketCount@mlpr=\count400
+\blkLvl@mlpr=\count401
+\blkLvlAtClassdef@mlpr=\count402
+\emHeight@mlpr=\skip73
+\jayDepth@mlpr=\skip74
+\sectionRuleOffset@mlpr=\skip75
+\toks@mlpr=\toks62
+) (c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
  (c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count400
+\lrq@indent=\count403
  (c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count401
-\c@listtotal=\count402
-\c@listcount=\count403
-\c@liststart=\count404
-\c@liststop=\count405
-\c@citecount=\count406
-\c@citetotal=\count407
-\c@multicitecount=\count408
-\c@multicitetotal=\count409
-\c@instcount=\count410
-\c@maxnames=\count411
-\c@minnames=\count412
-\c@maxitems=\count413
-\c@minitems=\count414
-\c@citecounter=\count415
-\c@maxcitecounter=\count416
-\c@savedcitecounter=\count417
-\c@uniquelist=\count418
-\c@uniquename=\count419
-\c@refsection=\count420
-\c@refsegment=\count421
-\c@maxextratitle=\count422
-\c@maxextratitleyear=\count423
-\c@maxextraname=\count424
-\c@maxextradate=\count425
-\c@maxextraalpha=\count426
-\c@abbrvpenalty=\count427
-\c@highnamepenalty=\count428
-\c@lownamepenalty=\count429
-\c@maxparens=\count430
-\c@parenlevel=\count431
-\blx@tempcnta=\count432
-\blx@tempcntb=\count433
-\blx@tempcntc=\count434
-\c@blx@maxsection=\count435
-\blx@maxsegment@0=\count436
-\blx@notetype=\count437
-\blx@parenlevel@text=\count438
-\blx@parenlevel@foot=\count439
-\blx@sectionciteorder@0=\count440
-\blx@sectionciteorderinternal@0=\count441
-\blx@entrysetcounter=\count442
-\blx@biblioinstance=\count443
-\labelnumberwidth=\skip74
-\labelalphawidth=\skip75
-\biblabelsep=\skip76
-\bibitemsep=\skip77
-\bibnamesep=\skip78
-\bibinitsep=\skip79
-\bibparsep=\skip80
-\bibhang=\skip81
+\c@tabx@nest=\count404
+\c@listtotal=\count405
+\c@listcount=\count406
+\c@liststart=\count407
+\c@liststop=\count408
+\c@citecount=\count409
+\c@citetotal=\count410
+\c@multicitecount=\count411
+\c@multicitetotal=\count412
+\c@instcount=\count413
+\c@maxnames=\count414
+\c@minnames=\count415
+\c@maxitems=\count416
+\c@minitems=\count417
+\c@citecounter=\count418
+\c@maxcitecounter=\count419
+\c@savedcitecounter=\count420
+\c@uniquelist=\count421
+\c@uniquename=\count422
+\c@refsection=\count423
+\c@refsegment=\count424
+\c@maxextratitle=\count425
+\c@maxextratitleyear=\count426
+\c@maxextraname=\count427
+\c@maxextradate=\count428
+\c@maxextraalpha=\count429
+\c@abbrvpenalty=\count430
+\c@highnamepenalty=\count431
+\c@lownamepenalty=\count432
+\c@maxparens=\count433
+\c@parenlevel=\count434
+\blx@tempcnta=\count435
+\blx@tempcntb=\count436
+\blx@tempcntc=\count437
+\c@blx@maxsection=\count438
+\blx@maxsegment@0=\count439
+\blx@notetype=\count440
+\blx@parenlevel@text=\count441
+\blx@parenlevel@foot=\count442
+\blx@sectionciteorder@0=\count443
+\blx@sectionciteorderinternal@0=\count444
+\blx@entrysetcounter=\count445
+\blx@biblioinstance=\count446
+\labelnumberwidth=\skip76
+\labelalphawidth=\skip77
+\biblabelsep=\skip78
+\bibitemsep=\skip79
+\bibnamesep=\skip80
+\bibinitsep=\skip81
+\bibparsep=\skip82
+\bibhang=\skip83
 \blx@bcfin=\read6
 \blx@bcfout=\write5
 \blx@langwohyphens=\language88
-\c@mincomprange=\count444
-\c@maxcomprange=\count445
-\c@mincompwidth=\count446
+\c@mincomprange=\count447
+\c@maxcomprange=\count448
+\c@mincompwidth=\count449
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -1129,88 +1131,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count447
-\c@savedafterword=\count448
-\c@annotator=\count449
-\c@savedannotator=\count450
-\c@author=\count451
-\c@savedauthor=\count452
-\c@bookauthor=\count453
-\c@savedbookauthor=\count454
-\c@commentator=\count455
-\c@savedcommentator=\count456
-\c@editor=\count457
-\c@savededitor=\count458
-\c@editora=\count459
-\c@savededitora=\count460
-\c@editorb=\count461
-\c@savededitorb=\count462
-\c@editorc=\count463
-\c@savededitorc=\count464
-\c@foreword=\count465
-\c@savedforeword=\count466
-\c@holder=\count467
-\c@savedholder=\count468
-\c@introduction=\count469
-\c@savedintroduction=\count470
-\c@namea=\count471
-\c@savednamea=\count472
-\c@nameb=\count473
-\c@savednameb=\count474
-\c@namec=\count475
-\c@savednamec=\count476
-\c@translator=\count477
-\c@savedtranslator=\count478
-\c@shortauthor=\count479
-\c@savedshortauthor=\count480
-\c@shorteditor=\count481
-\c@savedshorteditor=\count482
-\c@labelname=\count483
-\c@savedlabelname=\count484
-\c@institution=\count485
-\c@savedinstitution=\count486
-\c@lista=\count487
-\c@savedlista=\count488
-\c@listb=\count489
-\c@savedlistb=\count490
-\c@listc=\count491
-\c@savedlistc=\count492
-\c@listd=\count493
-\c@savedlistd=\count494
-\c@liste=\count495
-\c@savedliste=\count496
-\c@listf=\count497
-\c@savedlistf=\count498
-\c@location=\count499
-\c@savedlocation=\count500
-\c@organization=\count501
-\c@savedorganization=\count502
-\c@origlocation=\count503
-\c@savedoriglocation=\count504
-\c@origpublisher=\count505
-\c@savedorigpublisher=\count506
-\c@publisher=\count507
-\c@savedpublisher=\count508
-\c@language=\count509
-\c@savedlanguage=\count510
-\c@origlanguage=\count511
-\c@savedoriglanguage=\count512
-\c@pageref=\count513
-\c@savedpageref=\count514
-\shorthandwidth=\skip82
-\shortjournalwidth=\skip83
-\shortserieswidth=\skip84
-\shorttitlewidth=\skip85
-\shortauthorwidth=\skip86
-\shorteditorwidth=\skip87
-\locallabelnumberwidth=\skip88
-\locallabelalphawidth=\skip89
-\localshorthandwidth=\skip90
-\localshortjournalwidth=\skip91
-\localshortserieswidth=\skip92
-\localshorttitlewidth=\skip93
-\localshortauthorwidth=\skip94
-\localshorteditorwidth=\skip95
+\c@afterword=\count450
+\c@savedafterword=\count451
+\c@annotator=\count452
+\c@savedannotator=\count453
+\c@author=\count454
+\c@savedauthor=\count455
+\c@bookauthor=\count456
+\c@savedbookauthor=\count457
+\c@commentator=\count458
+\c@savedcommentator=\count459
+\c@editor=\count460
+\c@savededitor=\count461
+\c@editora=\count462
+\c@savededitora=\count463
+\c@editorb=\count464
+\c@savededitorb=\count465
+\c@editorc=\count466
+\c@savededitorc=\count467
+\c@foreword=\count468
+\c@savedforeword=\count469
+\c@holder=\count470
+\c@savedholder=\count471
+\c@introduction=\count472
+\c@savedintroduction=\count473
+\c@namea=\count474
+\c@savednamea=\count475
+\c@nameb=\count476
+\c@savednameb=\count477
+\c@namec=\count478
+\c@savednamec=\count479
+\c@translator=\count480
+\c@savedtranslator=\count481
+\c@shortauthor=\count482
+\c@savedshortauthor=\count483
+\c@shorteditor=\count484
+\c@savedshorteditor=\count485
+\c@labelname=\count486
+\c@savedlabelname=\count487
+\c@institution=\count488
+\c@savedinstitution=\count489
+\c@lista=\count490
+\c@savedlista=\count491
+\c@listb=\count492
+\c@savedlistb=\count493
+\c@listc=\count494
+\c@savedlistc=\count495
+\c@listd=\count496
+\c@savedlistd=\count497
+\c@liste=\count498
+\c@savedliste=\count499
+\c@listf=\count500
+\c@savedlistf=\count501
+\c@location=\count502
+\c@savedlocation=\count503
+\c@organization=\count504
+\c@savedorganization=\count505
+\c@origlocation=\count506
+\c@savedoriglocation=\count507
+\c@origpublisher=\count508
+\c@savedorigpublisher=\count509
+\c@publisher=\count510
+\c@savedpublisher=\count511
+\c@language=\count512
+\c@savedlanguage=\count513
+\c@origlanguage=\count514
+\c@savedoriglanguage=\count515
+\c@pageref=\count516
+\c@savedpageref=\count517
+\shorthandwidth=\skip84
+\shortjournalwidth=\skip85
+\shortserieswidth=\skip86
+\shorttitlewidth=\skip87
+\shortauthorwidth=\skip88
+\shorteditorwidth=\skip89
+\locallabelnumberwidth=\skip90
+\locallabelalphawidth=\skip91
+\localshorthandwidth=\skip92
+\localshortjournalwidth=\skip93
+\localshortserieswidth=\skip94
+\localshorttitlewidth=\skip95
+\localshortauthorwidth=\skip96
+\localshorteditorwidth=\skip97
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
  (c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-unicode.def)
@@ -1233,19 +1235,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
-\c@textcitecount=\count515
-\c@textcitetotal=\count516
-\c@textcitemaxnames=\count517
-\c@biburlbigbreakpenalty=\count518
-\c@biburlbreakpenalty=\count519
-\c@biburlnumpenalty=\count520
-\c@biburlucpenalty=\count521
-\c@biburllcpenalty=\count522
+\c@textcitecount=\count518
+\c@textcitetotal=\count519
+\c@textcitemaxnames=\count520
+\c@biburlbigbreakpenalty=\count521
+\c@biburlbreakpenalty=\count522
+\c@biburlnumpenalty=\count523
+\c@biburlucpenalty=\count524
+\c@biburllcpenalty=\count525
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count523
+\c@smartand=\count526
 )
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
@@ -1259,17 +1261,17 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (c:/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count524
-\c@bbx:relatedtotal=\count525
+\c@bbx:relatedcount=\count527
+\c@bbx:relatedtotal=\count528
 )))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
  (c:/texlive/2022/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count526
-\c@cbx@tempcntb=\count527
-\c@cbx@tempcntc=\count528
-\c@cbx@tempcntd=\count529
+\c@cbx@tempcnta=\count529
+\c@cbx@tempcntb=\count530
+\c@cbx@tempcntc=\count531
+\c@cbx@tempcntd=\count532
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1301,12 +1303,12 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (c:/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for TU+bch on input line 85.
-LaTeX Font Info:    No file TUbch.fd. on input line 85.
+LaTeX Font Info:    Trying to load font information for TU+bch on input line 47.
+LaTeX Font Info:    No file TUbch.fd. on input line 47.
 
 
 LaTeX Font Warning: Font shape `TU/bch/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 85.
+(Font)              using `TU/lmr/m/n' instead on input line 47.
 
 (c:/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1341,7 +1343,7 @@ Package fontspec Info: Font family 'Cochineal(4)' created for font 'Cochineal'
 (fontspec)             <->s*[1]"[Cochineal-BoldItalic.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 220.
+(Font)              scaled to size 12.0pt on input line 114.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 12.0pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 
@@ -1363,55 +1365,55 @@ Package fontspec Info: Font family 'Cochineal-Roman(0)' created for font
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count530
-\@quotereset=\count531
+\@quotelevel=\count533
+\@quotereset=\count534
 (./tesina-speziali.aux)
 \openout1 = `tesina-speziali.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/zcochmi/m/it on input line 220.
-LaTeX Font Info:    Trying to load font information for OML+zcochmi on input line 220.
+LaTeX Font Info:    Checking defaults for OML/zcochmi/m/it on input line 114.
+LaTeX Font Info:    Trying to load font information for OML+zcochmi on input line 114.
  (c:/texlive/2022/texmf-dist/tex/latex/cochineal/omlzcochmi.fd
 File: omlzcochmi.fd 2015/06/23 Fontinst v1.933 font definitions for OML/zcochmi.
 )
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 220.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 220.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 114.
  (c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 220.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 220.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 114.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 114.
  (c:/texlive/2022/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 220.
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 220.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 220.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 114.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 114.
  (c:/texlive/2022/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 220.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 220.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 220.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 114.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 114.
  (c:/texlive/2022/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    ... okay on input line 114.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1447,14 +1449,14 @@ LaTeX Font Info:    ... okay on input line 220.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 220.
+Package hyperref Info: Link coloring OFF on input line 114.
 (./tesina-speziali.out) (./tesina-speziali.out)
 \@outlinefile=\write6
 \openout6 = `tesina-speziali.out'.
 
-LaTeX Info: Command `\dddot' is already robust on input line 220.
-LaTeX Info: Command `\ddddot' is already robust on input line 220.
-\c@lstlisting=\count532
+LaTeX Info: Command `\dddot' is already robust on input line 114.
+LaTeX Info: Command `\ddddot' is already robust on input line 114.
+\c@lstlisting=\count535
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1477,22 +1479,22 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tesina-speziali.bbl' not found.
 
 No file tesina-speziali.bbl.
-Package biblatex Info: Reference section=0 on input line 220.
-Package biblatex Info: Reference segment=0 on input line 220.
+Package biblatex Info: Reference section=0 on input line 114.
+Package biblatex Info: Reference segment=0 on input line 114.
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 228.
+(Font)              scaled to size 17.28pt on input line 122.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 17.28pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 241.
+(Font)              scaled to size 14.4pt on input line 135.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 14.4pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 21.8pt on input line 245.
+(Font)              scaled to size 21.8pt on input line 139.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 21.8pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
-(Font)              scaled to size 21.8pt on input line 245.
+(Font)              scaled to size 21.8pt on input line 139.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 21.8pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
 File: Figures/logounipg2021.png Graphic file (type bmp)
@@ -1503,11 +1505,11 @@ File: Figures/logounipg2021.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 276.
+(Font)              scaled to size 24.88pt on input line 170.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 24.88pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 276.
+(Font)              scaled to size 24.88pt on input line 170.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 24.88pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
  (./tesina-speziali.toc
@@ -1589,24 +1591,24 @@ Requested font "ntxexa" at 6.6pt
 Capitolo 1.
 Capitolo 2.
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 291.
+(Font)              scaled to size 17.28pt on input line 185.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 17.28pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 8.8pt on input line 295.
+(Font)              scaled to size 8.8pt on input line 189.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 8.8pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/n' will be
-(Font)              scaled to size 6.6pt on input line 295.
+(Font)              scaled to size 6.6pt on input line 189.
 Requested font "[Cochineal-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 6.6pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Roman.otf
 [3
 
 ]
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/sl' in size <12> not available
-(Font)              Font shape `TU/Cochineal(4)/m/it' tried instead on input line 346.
+(Font)              Font shape `TU/Cochineal(4)/m/it' tried instead on input line 240.
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 346.
+(Font)              scaled to size 12.0pt on input line 240.
 Requested font "[Cochineal-Italic.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 12.0pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Italic.otf
 
@@ -1627,7 +1629,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 LaTeX Font Info:    Font shape `TU/Cochineal(4)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 383.
+(Font)              scaled to size 14.4pt on input line 277.
 Requested font "[Cochineal-Bold.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 14.4pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/public/cochineal/Cochineal-Bold.otf
 
@@ -1654,7 +1656,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Overfull \hbox (16.07439pt too wide) in paragraph at lines 473--480
+Overfull \hbox (16.07439pt too wide) in paragraph at lines 369--376
 [][] 
  []
 
@@ -1667,29 +1669,63 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 Capitolo 3.
+Requested font "[lmmono12-regular]:" at 12.0pt
+ -> c:/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf
 [9
 
 ]
+Requested font "[lmmono10-italic]:" at 12.0pt
+ -> c:/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-italic.otf
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 462.
+Requested font "[lmmonolt10-bold]:" at 12.0pt
+ -> c:/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
 Capitolo 4.
-[10
+[13
 
 ] (./tesina-speziali.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `tesina-speziali.out' has not changed.
-(rerunfilecheck)             Checksum: 8E3F10C804F660B07C6ADF775B0AAEE7;1674.
+(rerunfilecheck)             Checksum: 19AD10EBC8C50B0CDE077C9CE29AF9A6;2161.
 Package logreq Info: Writing requests to 'tesina-speziali.run.xml'.
 \openout1 = `tesina-speziali.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48794 strings out of 475748
- 1060327 string characters out of 5802711
- 1876491 words of memory out of 5000000
- 69261 multiletter control sequences out of 15000+600000
- 503437 words of font info for 78 fonts, out of 8000000 for 9000
+ 49072 strings out of 475748
+ 1064184 string characters out of 5802711
+ 1941865 words of memory out of 5000000
+ 69529 multiletter control sequences out of 15000+600000
+ 503461 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,12n,133p,1857b,4832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tesina-speziali.pdf (11 pages).
+Output written on tesina-speziali.pdf (14 pages).
