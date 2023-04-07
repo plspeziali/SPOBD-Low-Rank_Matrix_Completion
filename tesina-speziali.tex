@@ -374,6 +374,7 @@ il costo computazionale è molto più basso (unendolo al basso costo di un'itera
 \newpage
 Ricapitolando il tutto con una tabella che mette a confronto i tre algoritmi:
 \begin{table}[H]
+  \centering
   \begin{tabular}{@{}lllll@{}}
     \cmidrule(r){1-3}
     \textbf{Algoritmo}                              & \textbf{Complessità campionaria} & \textbf{Complessità computazionale} &  &  \\ \cmidrule(r){1-3}
@@ -493,16 +494,68 @@ M_rec(~observed) = M(~observed);
 
 In questo caso viene utilizzata la $M$ completa ma unicamente per
 calcolare la metrica di errore:
-$$\frac{\frobnorm{X_t Y_t^T - M}}{\frobnorm{M}}$$questa non serve per il gradient descent
+$$\frac{\frobnorm{X_t Y_t^T - M}}{\frobnorm{M}}$$
+questa non serve per il gradient descent
 ma per valutare le prestazioni dell'algoritmo.
 
 \chapter{Verifica sperimentale}
 
-Per verificare il funzionamento degli algoritmi è stata generata una matrice
-$M$ di rango $10$ e dimensione $10^4 \times 10^4$ costituita da valori
+\section{Confronto degli algoritmi}
+
+Per confrontare le prestazioni degli algoritmi è stata generata una matrice
+$M$ di rango $5$ e dimensione $750 \times 750$ costituita da valori
 interi $\in [-10,10]$ e i.i.d., di questa matrice ne è stato
 osservato casualmente il $5\%$ delle entry.
 
+Di seguito si riportano il tempo impiegato
+da ogni algoritmo e l'RMSE (Root Mean Square Error)
+delle matrici ricostruite confrontate con la matrice $M$ originale:
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{@{}lllll@{}}
+  \toprule
+  \textbf{Algoritmo} & \textbf{Iterazioni} & \textbf{Tempo impiegato (s)} & \textbf{RMSE} \\ \midrule
+  Nuclear norm\\ minimization                         & $15$  & $761.60$ & $9.19\cdot 10^{-6}$ \\ \midrule
+  Gradient descent\\ con inizializzazione\\ spettrale & $986$ & $5.27$   & $0.0691$             \\ \bottomrule
+  \end{tabular}
+\end{table}
+Possiamo vedere come la minimizzazione della norma nucleare
+sia molto più lenta del gradient descent ma produca risultati decisamente più
+fedeli alla matrice originale. D'altro canto anche il gradient descent ci 
+fornisce un errore abbastanza basso.
+
+\newpage
+
+\section{Verifica del gradient descent}
+
+Generando, con la stessa tecnica vista nella sezione precedente,
+matrici da diverse dimensioni e rango
+e campionando sempre il $5\%$ dei valori, raccogliamo i risultati
+di esecuzioni multiple dell'algoritmo di gradient descent:
+\begin{table}[H]
+  \centering
+  \begin{tabular}{@{}llllll@{}}
+  \toprule
+  \textbf{$\boldsymbol{n_1 \times n_2, \; r}$} & \textbf{Comp. campionaria} & \textbf{Tempo (s)} & \textbf{Iter.} & \textbf{Tempo iter. (s)} & \textbf{RMSE} \\ \midrule
+  $10^3 \times 10^3, \; 3$  & $208.27$  & $13.49$   & $690$     & $0.02$     & $0.033$     \\ \midrule
+  $10^3 \times 10^3, \; 5$  & $526.60$  & $14.82$   & $741$     & $0.02$     & $0.050$     \\ \midrule
+  $10^3 \times 10^3, \; 10$ & $2313.31$ & $32.13$   & $1579$    & $0.02$     & $0.099$     \\ \midrule
+  $10^4 \times 10^4, \; 3$  & $47.41$   & $826.02$  & $368$     & $2.24$     & $0.034$     \\ \midrule
+  $10^4 \times 10^4, \; 5$  & $181.52$  & $702.45$  & $374$     & $1.88$     & $0.046$     \\ \midrule
+  $10^4 \times 10^4, \; 10$ & $737.69$  & $834.35$  & $429$     & $1.94$     & $0.063$     \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Vediamo, nella figura che segue, un grafico che ci mostra l'andamento dell'errore normalizzato
+ad ogni iterazione per ognuna di queste matrici:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{Figures/errors}
+\end{figure}
+Si può rapidamente osservare come, al diminuire della complessità campionaria della matrice,
+l'algoritmo impiega meno iterazioni a far convergere l'errore e la funzione
+tenda ad assumere una velocità di convergenza geometrica.
 
 
 

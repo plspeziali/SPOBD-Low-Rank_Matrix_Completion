@@ -10,3 +10,5 @@
 \contentsline {section}{\numberline {3.1}Nuclear norm minimization}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Gradient descent con inizializzazione spettrale}{11}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Verifica sperimentale}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Confronto degli algoritmi}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Verifica del gradient descent}{15}{section.4.2}%
