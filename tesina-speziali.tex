@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper]{report}
+\usepackage[backend=bibtex]{biblatex}
 \usepackage[italian]{babel}
 %\usepackage[T1]{fontenc} % Riga da commentare se si compila con PDFLaTeX
 \usepackage{geometry}
@@ -25,8 +26,8 @@
 \usepackage{subfig}
 \usepackage[edges]{forest}
 \usepackage{matlab-prettifier}
-\usepackage[style=numeric-comp,useprefix,hyperref,backend=bibtex]{biblatex}
 
+\addbibresource{bibliografia.bib}
 
 \NewDocumentCommand{\codeword}{v}{%
     \texttt{\textcolor{blue}{#1}}%
@@ -178,7 +179,7 @@ Dipartimento di Ingegneria
 
 Lo scopo di questa tesina è l'implementazione in ambiente MATLAB di alcuni algoritmi
 atti a risolvere il problema dello stimare i valori mancanti di una matrice di cui
-abbiamo a disoposizione solo un sottoinsieme limtato di entry.
+abbiamo a disoposizione solo un sottoinsieme limtato di entry \cite{lowrank}.
 
 {\let\clearpage\relax\chapter{Concetti teorici}}
 
@@ -522,8 +523,12 @@ delle matrici ricostruite confrontate con la matrice $M$ originale:
 \end{table}
 Possiamo vedere come la minimizzazione della norma nucleare
 sia molto più lenta del gradient descent ma produca risultati decisamente più
-fedeli alla matrice originale. D'altro canto anche il gradient descent ci 
-fornisce un errore abbastanza basso.
+fedeli alla matrice originale.
+
+D'altro canto anche il gradient descent ci 
+fornisce un errore abbastanza basso e accettabile per alcune applicazioni
+(per un recommendation system in cui la precisione
+non è triviale può essere sufficiente).
 
 \newpage
 
@@ -551,15 +556,17 @@ Vediamo, nella figura che segue, un grafico che ci mostra l'andamento dell'error
 ad ogni iterazione per ognuna di queste matrici:
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{Figures/errors}
+  \includegraphics[width=.75\textwidth]{Figures/errors}
 \end{figure}
-Si può rapidamente osservare come, al diminuire della complessità campionaria della matrice,
-l'algoritmo impiega meno iterazioni a far convergere l'errore e la funzione
+Si può osservare come, al diminuire della complessità campionaria della matrice,
+l'algoritmo impieghi meno iterazioni a far convergere l'errore e la funzione
 tenda ad assumere una velocità di convergenza geometrica.
 
 
 
 \hyphenpenalty=0
+
+\printbibliography
 
 \cleardoublepage\phantomsection % to fix wrong hyperref to \part{Epilogue}
 

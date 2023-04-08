@@ -58,8 +58,7 @@
       <file>biblatex.def</file>
       <file>standard.bbx</file>
       <file>numeric.bbx</file>
-      <file>numeric-comp.bbx</file>
-      <file>numeric-comp.cbx</file>
+      <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
       <file>italian.lbx</file>
     </requires>
@@ -85,6 +84,7 @@
       <file>tesina-speziali-blx.bib</file>
     </requires>
     <requires type="editable">
+      <file>bibliografia.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>

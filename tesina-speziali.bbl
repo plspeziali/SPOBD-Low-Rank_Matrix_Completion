@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{lowrank}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CY}{%
+         family={Chi},
+         familyi={C\bibinitperiod},
+         given={Yuejie},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CY1}
+    \strng{fullhash}{CY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Imagine one observes a small subset of entries in a large matrix and aims
+  to recover the entire matrix. Without a priori knowledge of the matrix, this
+  problem is highly ill-posed. Fortunately, data matrices often exhibit
+  low-dimensional structures that can be used effectively to regularize the
+  solution space. The celebrated effectiveness of principal component analysis
+  (PCA) in science and engineering suggests that most variability of real-world
+  data can be accounted for by projecting the data onto a few directions known
+  as the principal components. Correspondingly, the data matrix can be modeled
+  as a low-rank matrix, at least approximately. Is it possible to complete a
+  partially observed matrix if its rank, i.e., its maximum number of linearly
+  independent row or column vectors, is small?%
+    }
+    \verb{doi}
+    \verb 10.1109/MSP.2018.2832197
+    \endverb
+    \field{issn}{1558-0792}
+    \field{number}{5}
+    \field{pages}{178\bibrangedash 181}
+    \field{title}{Low-Rank Matrix Completion [Lecture Notes]}
+    \field{volume}{35}
+    \field{journaltitle}{IEEE Signal Processing Magazine}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\enddatalist
+\endinput
