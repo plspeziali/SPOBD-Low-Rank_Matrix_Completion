@@ -1,5 +1,4 @@
 \documentclass[12pt,a4paper]{report}
-\usepackage[backend=bibtex]{biblatex}
 \usepackage[italian]{babel}
 %\usepackage[T1]{fontenc} % Riga da commentare se si compila con PDFLaTeX
 \usepackage{geometry}
@@ -26,8 +25,6 @@
 \usepackage{subfig}
 \usepackage[edges]{forest}
 \usepackage{matlab-prettifier}
-
-\addbibresource{bibliografia.bib}
 
 \NewDocumentCommand{\codeword}{v}{%
     \texttt{\textcolor{blue}{#1}}%
@@ -179,7 +176,7 @@ Dipartimento di Ingegneria
 
 Lo scopo di questa tesina è l'implementazione in ambiente MATLAB di alcuni algoritmi
 atti a risolvere il problema dello stimare i valori mancanti di una matrice di cui
-abbiamo a disoposizione solo un sottoinsieme limtato di entry \cite{lowrank}.
+abbiamo a disoposizione solo un sottoinsieme limtato di entry.
 
 {\let\clearpage\relax\chapter{Concetti teorici}}
 
@@ -282,7 +279,7 @@ Cercando di sfruttare la struttura a basso rango della soluzione, un'euristica n
 $$ \underset{\Phi \in \mathbb{R}^{n_1 \times n_2}}{min}\;\; rank(\Phi) $$
 $$ s.t. \;\;  \mathcal{P}_{\Omega}(\Phi) = \mathcal{P}_{\Omega}(M) $$ 
 Tuttavia, essendo la minimizzazione del rango un problema NP-arduo,
-tale formulazione non è intrattabile, possiamo tuttavia
+tale formulazione è intrattabile, possiamo però
 pensare a un possibile rilassamento di questa euristica.
 
 Notando che il rango di $\Phi$ è uguale al numero dei suoi valori singolari non nulli,
@@ -566,8 +563,12 @@ tenda ad assumere una velocità di convergenza geometrica.
 
 \hyphenpenalty=0
 
-\printbibliography
+\begin{thebibliography}{9}
 
+  \bibitem{8454912}Chi, Y. Low-Rank Matrix Completion [Lecture Notes].
+  {\em IEEE Signal Processing Magazine}. \textbf{35}, 178-181 (2018)
+
+\end{thebibliography}
 \cleardoublepage\phantomsection % to fix wrong hyperref to \part{Epilogue}
 
 \end{document}
