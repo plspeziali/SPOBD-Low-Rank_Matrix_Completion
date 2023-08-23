@@ -181,7 +181,7 @@ abbiamo a disoposizione solo un sottoinsieme limtato di entry.
 
 \section{Formulazione del problema}
 
-Sia $M\in\mathbb{R}^{n_1\times n_2}$ con rango $r$, e sia data la sua scomposizione ai valori
+Sia $M\in\mathbb{R}^{n_1\times n_2}$ con rango $r$ e sia data la sua scomposizione ai valori
 singolari (SVD):
 $$M=U\Sigma V^T \quad\text{con}\quad U\in\mathbb{R}^{n_1\times r},
 \;\Sigma\in\mathbb{R}^{r\times r},\;V\in\mathbb{R}^{n_2\times r}$$
@@ -189,7 +189,7 @@ dove $U$ e $V$ sono composte da colonne ortonormali, e $\Sigma$ è una matrice
 diagonale con i valori singolari ordinati in modo non crescente
 ($\sigma_1\geq\sigma_2\geq\ldots\geq\sigma_r>0$).
 
-I \textbf{gradi di libertà} di $M$ sono $(n_1 + n_2 - r)r$, che è il numero totale di parametri
+I \textbf{gradi di libertà} di $M$ sono $(n_1 + n_2 - r)r$, corrispondono al numero totale di parametri
 necessari per specificare univocamente la matrice $M$.
 
 \newpage
@@ -223,7 +223,7 @@ poiché la maggior parte delle sue voci sono nulle
 e quindi abbiamo bisogno di raccogliere più misure per assicurarsi
 che abbastanza ``massa'' venga dalle sue voci non nulle.
 Al contrario, la massa di $M_2$ è distribuita più uniformemente su tutte le voci,
-rendendolo più facile da propagare da una voce all'altra.
+rendendo più facile propagare informazione da una voce all'altra.
 
 In altre parole, una matrice a basso rango è più facile da completare se la sua energia
 si distribuisce uniformemente su diverse coordinate.
@@ -262,8 +262,9 @@ un pattern di osservazione causale che segua un modello di distribuzione di prob
 noto come \textbf{Bernoulli}, per cui ogni valore viene osservato indipendentemente
 e con probabilità uguale a $p := \frac{m}{n_1\cdot n_2}$.
 
-Non è possibile recuperare una matrice a basso rango con un numero di osservazioni
-dell'ordine di $O(\mu n r \log n)$ utilizzando un qualsiasi algoritmo,
+Sotto l'ipotesi di campionamento bernoulliano,
+non è possibile recuperare una matrice a basso rango con un numero di osservazioni
+inferiore all'ordine di $O(\mu n r \log n)$ utilizzando un qualsiasi algoritmo,
 questo è noto come l'\textbf{information-theoretic lower bound}.
 Rispetto ai gradi di libertà, che sono dell'ordine di $nr$,
 paghiamo un prezzo in complessità di campionamento di un fattore $\mu \log n$,
@@ -326,8 +327,8 @@ problemi di scalabilità e avere norme bilanciate:
 $$ F(X,Y) = \frac{1}{4p}\mathit{f}(X,Y) + \frac{1}{16}\frobnorm{X^TX - Y^TY}^2  $$
 $$ = \frac{1}{4p}\frobnorm{\mathcal{P}_{\Omega}(XY^T - M)}^2 + \frac{1}{16}\frobnorm{X^TX - Y^TY}^2 $$
 I cui gradienti rispetto a $X$ e a $Y$ sono:
-$$ \frac{\partial F(X,Y)}{\partial X} = \frac{1}{4p} ((\mathcal{P}_{\Omega}(XY^T - M))Y) + \frac{1}{8} X (X^TX-Y^TY)$$
-$$ \frac{\partial F(X,Y)}{\partial Y} = \frac{1}{4p} (X^T(\mathcal{P}_{\Omega}(XY^T - M)))^T + \frac{1}{8} Y (X^TX-Y^TY)$$
+$$ \frac{\partial F(X,Y)}{\partial X} = \frac{1}{2p} ((\mathcal{P}_{\Omega}(XY^T - M))Y) + \frac{1}{8} X (X^TX-Y^TY)$$
+$$ \frac{\partial F(X,Y)}{\partial Y} = \frac{1}{2p} (X^T(\mathcal{P}_{\Omega}(XY^T - M)))^T + \frac{1}{8} Y (X^TX-Y^TY)$$
 \newpage
 La probabilità $p$ delle osservazioni può essere stimata com $p = \frac{|\Omega|}{n_1\cdot n_2}$.
 
@@ -376,8 +377,8 @@ Ricapitolando il tutto con una tabella che mette a confronto i tre algoritmi:
     \cmidrule(r){1-3}
     \textbf{Algoritmo}                              & \textbf{Complessità campionaria} & \textbf{Complessità computazionale} &  &  \\ \cmidrule(r){1-3}
     Information-theoretic\\ lower bound               & $\mu n r \log n$                    & NP-hard                           &  &  \\ \cmidrule(r){1-3}
-    Nuclear norm\\ minimization                       & $\mu n r \log^2 n$                  & Tempo polinomiale                   &  &  \\ \cmidrule(r){1-3}
-    Gradient descent\\ con inizializzazione\\ spettrale & $\mu^3 n r^3 \log^3 n$              & Tempo lineare                       &  &  \\ \cmidrule(r){1-3}
+    Nuclear norm\\ minimization                       & $\mu n r \log^2 n$                  & Polinomiale                   &  &  \\ \cmidrule(r){1-3}
+    Gradient descent\\ con inizializzazione\\ spettrale & $\mu^3 n r^3 \log^3 n$              & Lineare                       &  &  \\ \cmidrule(r){1-3}
   \end{tabular}
 \end{table}
 
@@ -463,7 +464,7 @@ $$ |F_i - F_{i-1}| < 10^{-5} \cdot F_{i-1} $$
 % Gradient Descent con Inizializzazione Spettrale
 xy = X*Y';
 m = zeros(n1,n2);
-m(P_Omega) = xy(P_Omega);
+m(~observed) = xy(~observed);
 
 while ~converged && iter < max_iter
     X = X - eta * dF_dx(X,Y,m);
@@ -471,7 +472,7 @@ while ~converged && iter < max_iter
 
     xy = X*Y';
     m = zeros(n1,n2);
-    m(P_Omega) = xy(P_Omega);
+    m(~observed) = xy(~observed);
 
     f_vals(iter+1) = F(X,Y,m);
     error(iter+1) = norm(xy - M, 'fro') / norm(M, 'fro');
@@ -494,6 +495,12 @@ calcolare la metrica di errore:
 $$\frac{\frobnorm{X_t Y_t^T - M}}{\frobnorm{M}}$$
 questa non serve per il gradient descent
 ma per valutare le prestazioni dell'algoritmo.
+
+\`E tuttavia doveroso segnalare il fatto che è stata utilizzata,
+per calcolare $\eta$, la matrice $\Sigma$
+($S$ nel codice) ottenuta dalla SVD di $M = U\Sigma V^{-1}$.
+Ciò è necessario per calcolare la step size che fa convergere l'algoritmo e
+non sono stati esplorati metodi per ottenerne una senza l'ausilio di $\Sigma$.
 
 \chapter{Verifica sperimentale}
 

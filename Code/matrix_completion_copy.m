@@ -4,20 +4,28 @@ clc;
 
 rng('default') % For reproducibility
 % Dimensioni della matrice
-n1 = 10000;
-n2 = 10000;
+%n1 = 10000;
+%n2 = 10000;
+% Massimo numero intero nella natrice
+%imax = 10;
+% Rango della matrice
+%r = 5;
+
+% Loading the dataset matrix
+load('dataset/sparse_matrix_less.mat')
+M = sparse(M);
+r = sprank(M);
+
+[n1,n2] = size(M);
 n = max(n1,n2);
+
 % Numero di campioni
 m = round((n1*n2)/100 * 5);
-% Massimo numero intero nella natrice
-imax = 10;
-% Rango della matrice
-r = 5;
 % Probabilità di Bernoulli
 p = m / (n1 * n2);
 
-% Genero la matrice M randomicamente
-M = randi([-imax, imax], n1, r) * randi([-imax, imax], r, n2);
+% get the row and column indices of non-zero elements
+[row, col] = find(M);
 
 % randomly select n indices
 m = 200; % set the number of indices to select
@@ -42,35 +50,32 @@ ei = eye(n2);
 mu_v = n2/r * max(sum((V'*ei).^2, 1)); 
 mu = max(mu_u, mu_v);
 
-% Calcolo della sample complexity
-sam_co = (mu * r * (log(n))^2) /n;
-
-tic;
-
-% Nuclear norm minimization
-cvx_begin
-    variable Phi(n1,n2)
-    minimize ( norm_nuc(Phi) )
-    subject to
-        Phi(~observed) == P_M_mat(~observed)
-cvx_end
-
-time1 = toc;
-
-figure(1)
-plot(cvx_slvitrerr(1:cvx_slvitr))
-grid()
-title('Errore di CVX in funzione delle iterazioni')
-xlabel('n° iterazioni')
-ylabel("Valore dell'errore di CVX")
-
-
-
-% MSE
-E    = Phi-M;
-SQE  = E.^2;
-MSE  = mean(SQE(:));
-RMSE_1 = sqrt(MSE);
+% tic;
+% 
+% % Nuclear norm minimization
+% cvx_begin
+%     variable Phi(n1,n2)
+%     minimize ( norm_nuc(Phi) )
+%     subject to
+%         Phi(P_Omega) == P_M
+% cvx_end
+% 
+% time1 = toc;
+% 
+% figure(1)
+% plot(cvx_slvitrerr(1:cvx_slvitr))
+% grid()
+% title('Errore di CVX in funzione delle iterazioni')
+% xlabel('n° iterazioni')
+% ylabel("Valore dell'errore di CVX")
+% 
+% 
+% 
+% % MSE
+% E    = Phi-M;
+% SQE  = E.^2;
+% MSE  = mean(SQE(:));
+% RMSE_1 = sqrt(MSE);
 
 % Calculate sample complexity
 sam_co_2 = (mu^3 * r^3 * (log(n))^3) /n;
